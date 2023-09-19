@@ -1,21 +1,21 @@
-nterms = int(input("enter the number "))
+class Player:
+    def play(self):
+        print("The player is playing cricket.")
 
-n1, n2 = 0, 1
-count = 0
+class Batsman(Player):
+    def play(self):
+        print("The batsman is batting.")
 
-if nterms <= 0:
-  print("Please enter a positive integer")
+class Bowler(Player):
+    def play(self):
+        print("The bowler is bowling.")
 
-elif nterms == 1:
-  print("Fibonacci sequence upto", nterms, ":")
-  print(n1)
+# Create objects of both Batsman and Bowler classes
+batsman = Batsman()
+bowler = Bowler()
 
-else:
-  print("Fibonacci sequence:")
-  while count < nterms:
-    print(n1)
-    nth = n1 + n2
+# Call the play() method for each object
+batsman.play()
+bowler.play()
 
-    n1 = n2
-    n2 = nth
-    count += 1
+
